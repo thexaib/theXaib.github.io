@@ -36,6 +36,18 @@
   <title>whatmycolorname</title>
   <link rel="manifest" href="manifest.json">
   <link rel="stylesheet" type="text/css" href="splash/style.css">
+
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-QMTPK1NRMN"></script>
+  <script>
+    var doNotTrack = false;
+    if (!doNotTrack) {
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-QMTPK1NRMN', { 'anonymize_ip': false });
+    }
+  </script>
+
 </head>
 <body>
   <!-- This script installs service_worker.js to provide PWA functionality to
