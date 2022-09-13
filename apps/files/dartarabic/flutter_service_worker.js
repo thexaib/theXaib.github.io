@@ -6,22 +6,22 @@ const RESOURCES = {
   "assets/AssetManifest.json": "2efbb41d7877d10aac9d091f58ccd7b9",
 "assets/FontManifest.json": "dc3d03800ccca4601324923c0b1d6d57",
 "assets/fonts/MaterialIcons-Regular.otf": "95db9098c58fd6db106f1116bae85a0b",
-"assets/NOTICES": "1e8e96ab510b88e48f5340abcb50e5d1",
+"assets/NOTICES": "56d878be3ea60fdb0dd63d968c6969a5",
 "assets/packages/cupertino_icons/assets/CupertinoIcons.ttf": "6d342eb68f170c97609e9da345464e5e",
 "assets/shaders/ink_sparkle.frag": "30fd208b590d51c593f727d3adb4da13",
 "canvaskit/canvaskit.js": "2bc454a691c631b07a9307ac4ca47797",
 "canvaskit/canvaskit.wasm": "bf50631470eb967688cca13ee181af62",
 "canvaskit/profiling/canvaskit.js": "38164e5a72bdad0faa4ce740c9b8e564",
 "canvaskit/profiling/canvaskit.wasm": "95a45378b69e77af5ed2bc72b2209b94",
-"favicon.png": "5dcef449791fa27946b3d35ad8803796",
+"favicon.png": "09eeea2dd05627d83cae5fda05d8ace9",
 "flutter.js": "f85e6fb278b0fd20c349186fb46ae36d",
-"icons/Icon-192.png": "ac9a721a12bbc803b44f645561ecb1e1",
-"icons/Icon-512.png": "96e752610906ba2a93c65f8abe1645f1",
-"icons/Icon-maskable-192.png": "c457ef57daa1d16f64b27b786ec2ea3c",
-"icons/Icon-maskable-512.png": "301a7604d45b3e739efc881eb04896ea",
-"index.html": "4604b730fda3d0925d8dcdc2364a0cb6",
-"/apps/files/dartarabic/": "4604b730fda3d0925d8dcdc2364a0cb6",
-"main.dart.js": "3d49d84b7b025df829a31f17674a525f",
+"icons/Icon-192.png": "80ca2ed9da0a835d399b6f6ae9d2587b",
+"icons/Icon-512.png": "3a8482cee1c82da61fb718b3d7c56e2a",
+"icons/Icon-maskable-192.png": "80ca2ed9da0a835d399b6f6ae9d2587b",
+"icons/Icon-maskable-512.png": "3a8482cee1c82da61fb718b3d7c56e2a",
+"index.html": "7a96f6ee0e74e14136a8ddc6073f4ebc",
+"/apps/files/dartarabic/": "7a96f6ee0e74e14136a8ddc6073f4ebc",
+"main.dart.js": "f89f4877faae0caf75a1856a96b2b77f",
 "manifest.json": "955e157cf9b8bd8e06371eabce635fcb",
 "version.json": "a90d64d8cd0cd1148a5c7dfbf4cbf25f"
 };
@@ -163,7 +163,7 @@ async function downloadOffline() {
   for (var request of await contentCache.keys()) {
     var key = request.url.substring(origin.length + 1);
     if (key == "") {
-      key = "/";
+      key = "/apps/files/dartarabic/";
     }
     currentContent[key] = true;
   }
