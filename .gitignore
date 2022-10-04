@@ -1,1 +1,3 @@
-./.idea/misc.xml
+/public
+.hugo_build.lock
+/resources

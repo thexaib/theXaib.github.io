@@ -1,0 +1,18 @@
+{
+	"version": "2.0.0",
+	"tasks": [
+		{
+			"label": "Hugo:Start Dev",
+			"type": "shell",
+			"command": "hugo serve -D --source ${cwd}/_hugo",
+			"problemMatcher": []
+		},
+		{
+			"label": "Hugo:Publish",
+			"type": "shell",
+			"command": "hugo -D --source ${cwd}/_hugo",
+			"problemMatcher": []
+		},
+		
+	]
+}

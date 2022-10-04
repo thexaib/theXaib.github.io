@@ -1,0 +1,15 @@
+# -- Site Configuration --
+# Refer to the theme docs for more details about each of these parameters.
+# https://jpanther.github.io/congo/docs/getting-started/
+
+baseURL = "https://thexaib.github.io/"
+defaultContentLanguage = "en"
+
+enableRobotsTXT = true
+paginate = 10
+summaryLength = 0
+theme = "congo"
+googleAnalytics = "G-QMTPK1NRMN"
+[outputs]
+  home = ["HTML", "RSS", "JSON"]
+
