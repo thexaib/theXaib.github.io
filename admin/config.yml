@@ -1,20 +1,20 @@
 backend:
   name: git-gateway
-  repo: "thexaib/theXaib.github.io"
+  repo: "thexaib/theXaib.github.io.source"
   branch: master
   api_root: "https://api.github.com"
   site_domain: "thexaib.github.io"
   base_url: "https://api.netlify.com"
   auth_endpoint: "auth"
-media_folder: "static/uploads/images" # Folder where user uploaded files should go
+media_folder: "assets/uploads/images" # Folder where user uploaded files should go
 public_folder: "uploads/images"
 collections:
   - name: "apps" # Used in routes, e.g., /admin/collections/post
     label: "Apps" # Used in the UI
     folder: "content/apps" # The path to the folder where the documents are stored
-    path: "{{slug}}/index"
-    media_folder: "" # Save images in the post's own folder instead of the static folder
-    public_folder: ""
+    path: "{{year}}-{{slug}}/index"
+    media_folder: "assets/uploads/images" # Save images in the post's own folder instead of the static folder
+    public_folder: "uploads/images"
     create: true # Allow users to create new documents in this collection
     fields: # The fields for each document, usually in front matter
       - { label: "Title", name: "title", widget: "string" }
