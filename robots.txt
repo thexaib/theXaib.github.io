@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://thexaib.github.io/sitemap.xml
