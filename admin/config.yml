@@ -19,11 +19,13 @@ collections:
       - { label: "Title", name: "title", widget: "string" }
       - { label: "Description", name: "description", widget: "string", required: false }
       - { label: "Featured Image", name: "image", widget: "image", choose_url: "true" , required: false}
-      - { label: "Layout", name: "layout", widget: "select", add_to_top: true, allow_add: false, options: [ "simple","single" ], default:  "simple"  }
+      - { label: "Layout", name: "layout", widget: "select",, multiple: false,  allow_add: false, options: [ "simple","single" ], default:  ["simple"]  }
       - { label: "Publish Date", name: "date", widget: "datetime" }
       - { label: "Draft", name: "draft", widget: "boolean", default: true }
       - { label: "Show Author", name: "showAuthor", widget: "boolean", default: false }
       - { label: "Body", name: "body", widget: "markdown" }
+
+
   - name: "posts" # Used in routes, e.g., /admin/collections/post
     label: "Posts" # Used in the UI
     label_singular: "Post"
@@ -35,7 +37,7 @@ collections:
       - { label: "Title", name: "title", widget: "string" }
       - { label: "Description", name: "description", widget: "string" }
       - { label: "Featured Image", name: "featured_image", widget: "image" , choose_url: "true" , required: false}
-      - { label: "Layout", name: "layout", widget: "select", add_to_top: true, allow_add: false, options: [ "simple","single" ], default: "simple"  }
+      - { label: "Layout", name: "layout", widget: "select", multiple: false,  add_to_top: true, allow_add: false, options: [ "simple","single" ], default: ["simple"]  }
       - { label: "Publish Date", name: "date", widget: "datetime" }
       - { label: "Draft", name: "draft", widget: "boolean" , default: true}
       - { label: "Show Author", name: "showAuthor", widget: "boolean", default: false }
