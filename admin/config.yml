@@ -5,16 +5,39 @@ backend:
   site_domain: "thexaibgithubio.netlify.app"
 media_folder: "assets/uploads/images" # Folder where user uploaded files should go
 public_folder: "/uploads/images"
+editor:
+  preview: true
 collections:
   - name: "apps" # Used in routes, e.g., /admin/collections/post
     label: "Apps" # Used in the UI
+    label_singular: "App"
     folder: "content/apps" # The path to the folder where the documents are stored
     path: "{{year}}-{{slug}}/index"
+    preview_path: "apps/{{slug}}"
     create: true # Allow users to create new documents in this collection
     fields: # The fields for each document, usually in front matter
       - { label: "Title", name: "title", widget: "string" }
       - { label: "Publish Date", name: "date", widget: "datetime" }
       - { label: "Featured Image", name: "image", widget: "image" }
       - { label: "Draft", name: "draft", widget: "boolean" }
+      - { label: "Show Author", name: "showAuthor", widget: "boolean", default: false }
       - { label: "Description", name: "description", widget: "string" }
+      - { label: "Body", name: "body", widget: "markdown" }
+  - name: "posts" # Used in routes, e.g., /admin/collections/post
+    label: "Posts" # Used in the UI
+    label_singular: "Post"
+    folder: "content/posts" # The path to the folder where the documents are stored
+    preview_path: "posts/{{slug}}"
+    slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
+    create: true # Allow users to create new documents in this collection
+    fields: # The fields for each document, usually in front matter
+      - { label: "Title", name: "title", widget: "string" }
+      - { label: "Publish Date", name: "date", widget: "datetime" }
+      - { label: "Featured Image", name: "featured_image", widget: "image" }
+      - { label: "Draft", name: "draft", widget: "boolean" }
+      - { label: "Show Author", name: "showAuthor", widget: "boolean", default: false }
+      - { label: "Description", name: "description", widget: "string" }
+      - { label: "Layout", name: "layout", widget: "list", add_to_top: true, allow_add: false, default: ["simple","single"] }
+      - { label: "Categories", name: "categories", widget: "list",  allow_add: true, default: ["Mini Apps","Videos","Portfolio","News","Article"] }
+      - { label: "Tags", name: "tags", widget: "list",  allow_add: true, default: ["English","Urdu"] }
       - { label: "Body", name: "body", widget: "markdown" }
